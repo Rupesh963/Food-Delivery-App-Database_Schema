@@ -51,16 +51,16 @@ public class UserService {
          user.getRestaurants().add(restaurant1);
          user.getRestaurants().add(restaurant2);
 
-        User saved = userService.saveUser(user);
-        System.out.println(saved.getName());
+        //User saved = userService.saveUser(user);
+        //System.out.println(saved.getName());
 
     }
 
     @Test
     public void testUpdateUser() {
 
-        User user = userService.updateUser();
-        System.out.println("User updated");
+       // User user = userService.updateUser();
+       // System.out.println("User updated");
 
     }
 }

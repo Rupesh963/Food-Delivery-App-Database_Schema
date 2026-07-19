@@ -21,6 +21,9 @@ public class AuthController {
     @RequestMapping("/login")
     public List<String> login(@RequestBody List<String> list){
 
+        String test = null;
+        test.length();
+
         logger.info("list : {}" , list);
         return list;
 
@@ -41,7 +44,13 @@ public class AuthController {
         logger.info("password : {}" , userData.getPassword());
         return "we got data";
 
+    }
 
-
+    //Exception handling method
+    @ExceptionHandler(NullPointerException.class)
+    public String handleNullPointerException(NullPointerException ex) {
+        logger.error(ex.getMessage());
+        ex.printStackTrace();
+        return ex.getMessage();
     }
 }
